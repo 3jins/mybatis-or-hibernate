@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class Friend {
-    private int friendId;
+    private long friendId;
     private String name;
     private int age;
     private String characteristic;
