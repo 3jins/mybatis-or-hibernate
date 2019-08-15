@@ -19,6 +19,6 @@ public class FriendController {
     @ResponseBody
     @RequestMapping("/friends")
     public List<Friend> getFriends() {
-        return friendService.getAll();
+        return friendService.findAll();
     }
 }

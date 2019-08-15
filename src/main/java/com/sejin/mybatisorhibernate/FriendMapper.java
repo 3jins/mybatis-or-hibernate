@@ -10,14 +10,14 @@ import java.util.List;
 public interface FriendMapper {
     /* create */
     @Insert("INSERT INTO friend VALUES (#{friendId}, #{name}, #{age}, #{characteristic}")
-    void insert(Friend friend);
+    void save(Friend friend);
 
     /* read */
     @Select("SELECT * FROM friend")
-    List<Friend> getAll();
+    List<Friend> findAll();
     @Select("SELECT * FROM friend WHERE id")
-    Friend getById(long id);
-    // Friend getByName(String name);
+    Friend findById(long id);
+    // List<Friend> findByName(String name);
 
     /* update */
     // void updateName(long id, String name);

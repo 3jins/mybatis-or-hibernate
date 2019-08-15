@@ -16,7 +16,7 @@ public class FriendService {
         this.friendMapper = friendMapper;
     }
 
-    public List<Friend> getAll() {
-        return friendMapper.getAll();
+    public List<Friend> findAll() {
+        return friendMapper.findAll();
     }
 }
