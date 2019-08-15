@@ -22,12 +22,21 @@ export default () => {
     if (isFriendsEmpty) return <p>친구가 없어여 ㅠㅠ</p>;
     if (_.isEmpty(friends)) return <p>Loading...</p>;
     return friends.map((friend) => {
-      const { friendId, name, age, characteristic } = friend;
+      const {
+        friendId,
+        name,
+        age,
+        characteristic,
+        createdAt,
+        updatedAt,
+      } = friend;
       return (
         <div key={friendId}>
           <p>이름: {name}</p>
           <p>나이: {age}</p>
           <p>특징: {characteristic}</p>
+          <p>생성: {createdAt}</p>
+          <p>수정: {updatedAt}</p>
         </div>
       );
     });
